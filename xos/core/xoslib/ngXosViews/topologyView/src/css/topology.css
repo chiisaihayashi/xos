@@ -1,0 +1,9 @@
+topology-container .node{
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+topology-container .link {
+  stroke: #f0f;
+  stroke-opacity: 1;
+}

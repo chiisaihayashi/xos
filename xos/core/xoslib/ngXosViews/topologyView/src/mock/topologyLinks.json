@@ -1,0 +1,32 @@
+[
+  {
+    "source":"n1",
+    "target":"n2",
+    "value":1
+  },
+  {
+    "source":"n2",
+    "target":"n3",
+    "value":1
+  },
+  {
+    "source":"n3",
+    "target":"n4",
+    "value":1
+  },
+  {
+    "source":"n4",
+    "target":"n5",
+    "value":1
+  },
+  {
+    "source":"n5",
+    "target":"n6",
+    "value":1
+  },
+  {
+    "source":"n6",
+    "target":"n1",
+    "value":1
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "n1",
+    "label": "Label 1",
+    "type": "switch",
+    "x": 10,
+    "y": 20
+  },
+  {
+    "id": "n2",
+    "label": "Label 2",
+    "type": "bbu",
+    "x": 20,
+    "y": 10
+  },
+  {
+    "id": "n3",
+    "label": "Label 3",
+    "type": "vm",
+    "x": 20,
+    "y": 20
+  },
+  {
+    "id": "n4",
+    "label": "Label 4",
+    "type": "switch",
+    "x": 20,
+    "y": 20
+  },
+  {
+    "id": "n5",
+    "label": "Label 5",
+    "type": "bbu",
+    "x": 20,
+    "y": 10
+  },
+  {
+    "id": "n6",
+    "label": "Label 6",
+    "type": "vm",
+    "x": 600,
+    "y": 600
+  }
+]
