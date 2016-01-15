@@ -49,24 +49,66 @@
     "y": 10
   },
   {
-    "id": "bbu:2",
-    "label": "Base Band Unit",
-    "type": "bbu",
-    "x": 20,
-    "y": 10
-  },
-  {
     "id": "rru:1",
     "label": "Radio Unit",
     "type": "rru",
-    "x": 20,
-    "y": 10
+    "x": 70,
+    "y": 110
+  },
+  {
+    "id": "bbu:2",
+    "label": "Base Band Unit",
+    "type": "bbu",
+    "x": 220,
+    "y": 310
   },
   {
     "id": "rru:2",
     "label": "Radio Unit",
     "type": "rru",
-    "x": 20,
-    "y": 10
+    "x": 420,
+    "y": 110
+  },
+  {
+    "id": "bbu:3",
+    "label": "Base Band Unit",
+    "type": "bbu",
+    "x": 320,
+    "y": 310
+  },
+  {
+    "id": "rru:3",
+    "label": "Radio Unit",
+    "type": "rru",
+    "x": 520,
+    "y": 610
+  },
+  {
+    "id": "bbu:4",
+    "label": "Base Band Unit",
+    "type": "bbu",
+    "x": 420,
+    "y": 190
+  },
+  {
+    "id": "rru:4",
+    "label": "Radio Unit",
+    "type": "rru",
+    "x": 260,
+    "y": 130
+  },
+  {
+    "id": "bbu:5",
+    "label": "Base Band Unit",
+    "type": "bbu",
+    "x": 560,
+    "y": 60
+  },
+  {
+    "id": "rru:5",
+    "label": "Radio Unit",
+    "type": "rru",
+    "x": 200,
+    "y": 450
   }
 ]

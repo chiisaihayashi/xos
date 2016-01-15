@@ -35,8 +35,23 @@
     "value":1
   },
   {
+    "source":"ovs:1",
+    "target":"bbu:5",
+    "value":1
+  },
+  {
     "source":"ovs:2",
     "target":"bbu:2",
+    "value":1
+  },
+  {
+    "source":"ovs:2",
+    "target":"bbu:3",
+    "value":1
+  },
+  {
+    "source":"ovs:2",
+    "target":"bbu:4",
     "value":1
   },
   {
@@ -47,6 +62,21 @@
   {
     "source":"bbu:2",
     "target":"rru:2",
+    "value":1
+  },
+  {
+    "source":"bbu:3",
+    "target":"rru:3",
+    "value":1
+  },
+  {
+    "source":"bbu:4",
+    "target":"rru:4",
+    "value":1
+  },
+  {
+    "source":"bbu:5",
+    "target":"rru:5",
     "value":1
   }
 ]
