@@ -1,44 +1,72 @@
 [
   {
-    "id": "n1",
-    "label": "Label 1",
-    "type": "switch",
+    "id": "fabric:1",
+    "label": "Fabric Swich",
+    "type": "fabric-switch",
     "x": 10,
     "y": 20
   },
   {
-    "id": "n2",
-    "label": "Label 2",
+    "id": "fabric:2",
+    "label": "Fabric Swich",
+    "type": "fabric-switch",
+    "x": 50,
+    "y": 20
+  },
+  {
+    "id": "fabric:3",
+    "label": "Fabric Swich",
+    "type": "fabric-switch",
+    "x": 10,
+    "y": 50
+  },
+  {
+    "id": "fabric:4",
+    "label": "Fabric Swich",
+    "type": "fabric-switch",
+    "x": 50,
+    "y": 50
+  },
+  {
+    "id": "ovs:1",
+    "label": "Ovs Switch",
+    "type": "ovs-switch",
+    "x": 20,
+    "y": 20
+  },
+  {
+    "id": "ovs:2",
+    "label": "Ovs Switch",
+    "type": "ovs-switch",
+    "x": 20,
+    "y": 20
+  },
+  {
+    "id": "bbu:1",
+    "label": "Base Band Unit",
     "type": "bbu",
     "x": 20,
     "y": 10
   },
   {
-    "id": "n3",
-    "label": "Label 3",
-    "type": "vm",
-    "x": 20,
-    "y": 20
-  },
-  {
-    "id": "n4",
-    "label": "Label 4",
-    "type": "switch",
-    "x": 20,
-    "y": 20
-  },
-  {
-    "id": "n5",
-    "label": "Label 5",
+    "id": "bbu:2",
+    "label": "Base Band Unit",
     "type": "bbu",
     "x": 20,
     "y": 10
   },
   {
-    "id": "n6",
-    "label": "Label 6",
-    "type": "vm",
-    "x": 600,
-    "y": 600
+    "id": "rru:1",
+    "label": "Radio Unit",
+    "type": "rru",
+    "x": 20,
+    "y": 10
+  },
+  {
+    "id": "rru:2",
+    "label": "Radio Unit",
+    "type": "rru",
+    "x": 20,
+    "y": 10
   }
 ]

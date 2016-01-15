@@ -1,32 +1,52 @@
 [
   {
-    "source":"n1",
-    "target":"n2",
+    "source":"fabric:1",
+    "target":"fabric:3",
     "value":1
   },
   {
-    "source":"n2",
-    "target":"n3",
+    "source":"fabric:1",
+    "target":"fabric:4",
     "value":1
   },
   {
-    "source":"n3",
-    "target":"n4",
+    "source":"fabric:2",
+    "target":"fabric:3",
     "value":1
   },
   {
-    "source":"n4",
-    "target":"n5",
+    "source":"fabric:2",
+    "target":"fabric:4",
     "value":1
   },
   {
-    "source":"n5",
-    "target":"n6",
+    "source":"fabric:3",
+    "target":"ovs:1",
     "value":1
   },
   {
-    "source":"n6",
-    "target":"n1",
+    "source":"fabric:4",
+    "target":"ovs:2",
+    "value":1
+  },
+  {
+    "source":"ovs:1",
+    "target":"bbu:1",
+    "value":1
+  },
+  {
+    "source":"ovs:2",
+    "target":"bbu:2",
+    "value":1
+  },
+  {
+    "source":"bbu:1",
+    "target":"rru:1",
+    "value":1
+  },
+  {
+    "source":"bbu:2",
+    "target":"rru:2",
     "value":1
   }
 ]

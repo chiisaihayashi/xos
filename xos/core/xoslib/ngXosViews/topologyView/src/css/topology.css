@@ -1,9 +1,20 @@
 topology-container .node{
-  stroke: #fff;
+  stroke: #aaa;
   stroke-width: 1.5px;
 }
 
+topology-container .node-area{
+  fill-opacity: 0.3;
+}
+
 topology-container .link {
-  stroke: #f0f;
+  stroke: #000;
   stroke-opacity: 1;
+}
+
+topology-container .fabric-switch text,
+topology-container .ovs-switch text,
+topology-container .bbu text,
+topology-container .rru text {
+  color: #fff
 }
