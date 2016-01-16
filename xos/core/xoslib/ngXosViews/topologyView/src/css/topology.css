@@ -11,10 +11,3 @@ topology-container .link {
   stroke: #000;
   stroke-opacity: 1;
 }
-
-topology-container .fabric-switch text,
-topology-container .ovs-switch text,
-topology-container .bbu text,
-topology-container .rru text {
-  color: #fff
-}
