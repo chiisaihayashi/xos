@@ -1,0 +1,37 @@
+{
+  "comments": [
+    "Scenario that describe the sequence of events needed for ONS demo",
+    "Create a setup with 4 Fabric Switch, 2 Ovs Switch and 2 BBU",
+    "Then as traffic increase add 3 more BBU"
+  ],
+  "title": "Simple Startup Scenario",
+  "params": {
+    "lastAuto": 0
+  },
+  "description": [
+    "Simple sequence of events...",
+    "",
+    "1. add fabric switch FA",
+    "2. add fabric switch FB",
+    "3. add fabric switch FC",
+    "4. add fabric switch FD",
+    "5. add link FA - FB",
+    "6. add link FC - FD",
+    "7. add link FA - FD",
+    "8. add link FC - FB",
+    "9. add ovs switch OA",
+    "10. add ovs switch OB",
+    "11. add link FB - OA",
+    "12. add link FD - OB",
+    "13. add base band unit B1",
+    "14. add base band unit B2",
+    "15. add link OA - B1",
+    "16. add link OB - B2",
+    "17. add base band unit B3",
+    "18. add base band unit B4",
+    "19. add base band unit B5",
+    "20. add link OA - B3",
+    "21. add link OA - B4",
+    "22. add link OB - B5"
+  ]
+}

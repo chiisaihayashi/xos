@@ -6,9 +6,11 @@
     var force = null;
 
     this.createForceLayout = () => {
-      force = d3.layout.force()
-        .charge(-520)
-        .size([topoConfig.width, topoConfig.height]);
+      if(!force){
+        force = d3.layout.force()
+          .charge(-520)
+          .size([topoConfig.width, topoConfig.height]);
+      }
       return force;
     };
 
@@ -24,6 +26,7 @@
       if(!force){
         return _this.createForceLayout();
       }
+      console.log('getForceLayout');
       return force;
     }
   });

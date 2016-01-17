@@ -1,0 +1,15 @@
+{
+  "name": "mockserver",
+  "version": "1.0.0",
+  "description": "Websocket event manager for development purpose",
+  "main": "mockserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node mockserver.js"
+  },
+  "author": "Simon Hunt",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.22"
+  }
+}

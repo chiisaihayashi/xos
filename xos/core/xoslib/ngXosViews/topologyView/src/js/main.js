@@ -11,7 +11,7 @@ angular.module('xos.topologyView', [
   $stateProvider
   .state('user-list', {
     url: '/',
-    template: '<topology-container></topology-container>'
+    template: '<topology-canvas></topology-canvas>'
   });
 })
 .config(function($httpProvider){

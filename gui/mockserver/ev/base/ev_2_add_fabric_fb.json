@@ -1,0 +1,10 @@
+{
+  "event": "addNode",
+  "payload": {
+    "id": "fabric:b",
+    "label": "Fabric Swich",
+    "type": "fabric-switch",
+    "x": 100,
+    "y": 200
+  }
+}

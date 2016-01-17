@@ -1,0 +1,8 @@
+{
+  "event": "addLink",
+  "payload": {
+    "source":"fabric:a",
+    "target":"fabric:d",
+    "value":1
+  }
+}

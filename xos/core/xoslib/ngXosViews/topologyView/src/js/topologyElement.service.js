@@ -15,25 +15,41 @@
     }
 
     this.createLinks = (linkList) => {
-      return svg.selectAll('.link')
-        .data(linkList)
-        .enter().append('line')
-          .attr('class', 'link')
-          .style('stroke-width', function(d) { return Math.sqrt(d.value); });
+      const allLinks = svg.selectAll('.link')
+        .data(linkList, d => `${d.source} - ${d.target}`);
+
+      allLinks
+        .enter()
+        .append('line')
+          .attr('class', 'link');
+
+      // I link non riconoscono gli elementi associati
+      allLinks
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y);
+
+      return allLinks;
     }
 
     /**
     * Create all the nodes and attach them to the svg
     */
     this.createNodes = (nodeList) => {
-      return svg.selectAll('.node')
-        .data(nodeList, d => d.id)
+      
+      const allNodes = svg.selectAll('.node')
+        .data(nodeList, d => d.id);
+
+      allNodes
         .enter()
         .append('g')
         .attr({
           class: d => d.type,
           transform: d => topoUtils.createTranslation(d.x, d.y)
         });
+
+      return allNodes;
     };
 
     /**
