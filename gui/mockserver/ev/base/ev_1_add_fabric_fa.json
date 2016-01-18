@@ -2,7 +2,7 @@
   "event": "addNode",
   "payload": {
     "id": "fabric:a",
-    "label": "Fabric Swich",
+    "label": "Fabric Switch",
     "type": "fabric-switch",
     "x": 100,
     "y": 100

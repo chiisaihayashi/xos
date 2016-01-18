@@ -6,6 +6,7 @@
     height: 600,
     color: null,
     debug: false,
+    verboseDebug: false,
     nodeDefs: {
       'fabric-switch': {
         shape: 'rect',
@@ -37,6 +38,10 @@
     if($location.search().debug){
       $log.debug('DEBUG Enabled');
       topoConfig.debug = true;
+      if($location.search().verbose){
+        $log.debug('VERBOSE DEBUG Enabled');
+        topoConfig.verboseDebug = true;
+      }
     }
   })
 })();

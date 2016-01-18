@@ -1,22 +1,25 @@
 (function () {
   angular.module('xos.topologyView')
-  .service('topoElement', function(d3, topoConfig, topoForce, topoUtils){
+  .service('topoElement', function(d3, topoConfig, topoForce, topoUtils, lodash){
 
     const _this = this;
     const color = topoConfig.color;
-    const force = topoForce.getForceLayout();
-    var svg;
+    var svg, force;
 
     this.createSvg = (element) => {
-      return svg = d3.select(element)
+      svg = d3.select(element)
         .append('svg')
         .style('width', `${topoConfig.width}px`)
-        .style('height', `${topoConfig.height}px`)
-    }
+        .style('height', `${topoConfig.height}px`);
 
-    this.createLinks = (linkList) => {
+      force = topoForce.getForceLayout();
+
+      return svg;
+    };
+
+    this.createLinks = () => {
       const allLinks = svg.selectAll('.link')
-        .data(linkList, d => `${d.source} - ${d.target}`);
+        .data(topoForce.network.links, d => `${d.source} - ${d.target}`);
 
       allLinks
         .enter()
@@ -24,24 +27,21 @@
           .attr('class', 'link');
 
       // I link non riconoscono gli elementi associati
-      allLinks
-        .attr('x1', d => d.source.x)
-        .attr('y1', d => d.source.y)
-        .attr('x2', d => d.target.x)
-        .attr('y2', d => d.target.y);
+      topoForce.startForceLayout();
 
       return allLinks;
-    }
+    };
 
     /**
     * Create all the nodes and attach them to the svg
     */
-    this.createNodes = (nodeList) => {
+    this.createNodes = () => {
       
       const allNodes = svg.selectAll('.node')
-        .data(nodeList, d => d.id);
+        .data(topoForce.network.nodes, d => d.id);
 
-      allNodes
+      // NOTE we are not consideting update for now
+      const newNodes = allNodes
         .enter()
         .append('g')
         .attr({
@@ -49,7 +49,15 @@
           transform: d => topoUtils.createTranslation(d.x, d.y)
         });
 
-      force.start();
+      // for each defined node type
+      // add shape and label to the already existing node.
+      lodash.forEach(Object.keys(topoConfig.nodeDefs), (type) => {
+        let createNode = _this.createNodeElement(type);
+        let filteredNodes = newNodes.filter(`.${type}`);
+        filteredNodes.each(createNode);
+      });
+
+      topoForce.startForceLayout();
 
       return allNodes;
     };

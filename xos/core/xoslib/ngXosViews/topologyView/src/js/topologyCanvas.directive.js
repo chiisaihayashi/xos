@@ -14,49 +14,43 @@ angular.module('xos.topologyView')
     controller: function($element, $log, d3, topoConfig, topoForce, topoElement, topoUtils, WSClient, TopoData){
 
       topoElement.createSvg($element[0]);
-      const force = topoForce.createForceLayout();
 
       this.topologyNodes = [];
       this.topologyLinks = [];
-      
-      topoForce.startForceLayout(this.topologyNodes, this.topologyLinks);
 
       this.d3Links, this.d3Nodes;
 
       // TODO move in a service
       const eventHandlers = {
         addNode: (node) => {
-          this.topologyNodes.push(node);
-          this.d3Nodes = topoElement.createNodes(this.topologyNodes);
-
-          // add shape and label to the already existing node.
-          const createNode = topoElement.createNodeElement(node.type);
-          const filteredNodes = this.d3Nodes.filter(`.${node.type}`);
-          filteredNodes.each(createNode);
+          topoForce.network.nodes.push(node);
+          topoElement.createNodes();
         },
-        addLink: (evt) => {
-          evt.source = TopoData.getNodeIdx(this.topologyNodes, evt.source);
-          evt.target = TopoData.getNodeIdx(this.topologyNodes, evt.target);
+        addLink: (link) => {
+          link.source = TopoData.getNodeIdx(topoForce.network.nodes, link.source);
+          link.target = TopoData.getNodeIdx(topoForce.network.nodes, link.target);
 
           // TODO handle links pointing to non existing nodes
-          this.topologyLinks.push(evt);
+          topoForce.network.links.push(link);
           this.d3Links = topoElement.createLinks(this.topologyLinks);
         }
-      }
+      };
 
       // Handles the specified (incoming) message using handler bindings.
       function handleMessage(msgEvent) {
         var ev, h;
-
         try {
           ev = JSON.parse(msgEvent.data);
         } catch (e) {
           $log.error('Message.data is not valid JSON', msgEvent.data, e);
           return null;
         }
-        $log.debug(' ** WS ** ', ev.event, ev.payload);
+        if(topoConfig.debug){
+          $log.debug('[WS]', ev.event, ev.payload);
+        }
 
-        // NOTE if ev.event === bbu mu trigger rru
+
+        // NOTE if ev.event === bbu must trigger rru
 
         if (h = eventHandlers[ev.event]) {
           try {
