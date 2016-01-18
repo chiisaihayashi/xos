@@ -5,6 +5,7 @@
     width: 600,
     height: 600,
     color: null,
+    debug: false,
     nodeDefs: {
       'fabric-switch': {
         shape: 'rect',
@@ -31,7 +32,11 @@
       }
     }
   })
-  .run((topoConfig, d3) => {
+  .run(($location, $log, topoConfig, d3) => {
     topoConfig.color = d3.scale.category20();
+    if($location.search().debug){
+      $log.debug('DEBUG Enabled');
+      topoConfig.debug = true;
+    }
   })
 })();

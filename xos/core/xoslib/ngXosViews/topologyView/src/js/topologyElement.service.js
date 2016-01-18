@@ -49,6 +49,8 @@
           transform: d => topoUtils.createTranslation(d.x, d.y)
         });
 
+      force.start();
+
       return allNodes;
     };
 
